@@ -1,6 +1,7 @@
-FROM golang:1.16.7-alpine
+# FROM golang:1.16.7-alpine
+FROM golang:1.16
 
-RUN apk update && apk --no-cache add git gcc
+# RUN apk update && apk --no-cache add git gcc
 
 RUN go install github.com/uudashr/gopkgs/v2/cmd/gopkgs@latest \
   && go install github.com/ramya-rao-a/go-outline@latest \
