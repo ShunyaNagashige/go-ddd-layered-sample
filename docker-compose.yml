@@ -11,6 +11,8 @@ services:
     ports:
       #APIサーバ用のポート
       - ${APP_PORT}:8080
+    environment:
+      - ENV=${ENV}
     depends_on:
       - "db"
 
